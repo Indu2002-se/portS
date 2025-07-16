@@ -1,0 +1,236 @@
+# PORTSENTINEL PORT SCANNER USER MANUAL
+
+## Table of Contents
+1. Introduction
+2. System Requirements
+3. Installation
+4. Getting Started
+   - Creating an Account
+   - Logging In
+   - User Interface Overview
+5. Port Scanning
+   - Basic Scan
+   - Advanced Scan Options
+   - Understanding Scan Results
+6. Results Management
+   - Viewing Scan Details
+   - Exporting Results
+   - Export History
+7. Dashboard Features
+8. Account Management
+9. Security Best Practices
+10. Troubleshooting
+11. FAQ
+
+## 1. Introduction
+
+PortSentinel is an advanced port scanning application designed for network administrators, security professionals, and IT enthusiasts. It provides a comprehensive solution for scanning network ports, identifying open services, and analyzing potential security vulnerabilities.
+
+Key Features:
+- Multi-threaded scanning for fast and efficient port discovery
+- Detailed service identification and banner grabbing
+- SSL certificate analysis for secure services
+- Export capabilities in multiple formats (CSV, Excel, PDF)
+- User-friendly web interface with real-time progress tracking
+- Export history management for reviewing past scans
+- Secure user authentication system
+
+## 2. System Requirements
+
+- Operating System: Windows, macOS, or Linux
+- Python 3.7 or higher
+- Modern web browser (Chrome, Firefox, Edge, Safari)
+- Internet connection for initial setup and authentication
+- Network access permissions for target scanning
+
+## 3. Installation
+
+### Method 1: Direct Installation
+1. Ensure Python 3.7+ is installed on your system
+2. Download the PortSentinel application package
+3. Install required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Launch the application:
+   ```
+   python main.py
+   ```
+
+### Method 2: Running from Source
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```
+   cd Portsentinal-Scanner
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Start the application:
+   ```
+   python scanner_tool/main.py
+   ```
+
+## 4. Getting Started
+
+### Creating an Account
+1. Navigate to the landing page and click "Get Started" or "Create Free Account"
+2. Fill in the registration form with your:
+   - Username
+   - Email address
+   - Password
+3. Read and accept the Privacy Policy
+4. Click "Sign Up"
+5. Check your email inbox for a verification link
+6. Click the verification link to activate your account
+
+### Logging In
+1. Navigate to the login page
+2. Enter your registered email address and password
+3. Click "Login"
+4. If you forgot your password, click "Forgot Password" and follow the instructions
+
+### User Interface Overview
+The application consists of several key interface components:
+
+- **Landing Page**: Introduction to the application and its features
+- **Dashboard**: Overview of your scan history and statistics
+- **Scanner Page**: The main port scanning interface
+- **Export History**: View and manage your previous scan exports
+- **Account Settings**: Manage your user profile and preferences
+
+## 5. Port Scanning
+
+### Basic Scan
+1. Navigate to the Scanner page
+2. Enter the target IP address or hostname in the "Target Host" field
+3. Use the predefined port range or specify your own
+4. Click "Start Scan"
+5. Monitor the progress bar and status updates
+6. View results in the table or log view
+
+### Advanced Scan Options
+- **Threads**: Adjust the number of parallel scanning threads (default: 10)
+  - Higher values: Faster scanning but more network load
+  - Lower values: Slower scanning but more discrete
+- **Timeout**: Set connection timeout in seconds (default: 1.0)
+  - Higher values: More thorough scanning but slower
+  - Lower values: Faster scanning but may miss slow-responding services
+- **Port Range**: Specify custom port ranges:
+  - Individual ports: 22,80,443
+  - Port ranges: 1-1000
+  - Combinations: 22,80,443,8000-9000
+
+### Understanding Scan Results
+The scan results provide detailed information about each discovered port:
+
+- **Port Number**: The port that was scanned
+- **Status**: Open or Closed
+- **Service**: Identified service (HTTP, SSH, FTP, etc.)
+- **Version**: Service version information (when available)
+- **Server**: Server software identification (when available)
+- **Banner**: Service banner information showing service details
+- **SSL Certificate**: For secure services, details about the SSL certificate
+
+## 6. Results Management
+
+### Viewing Scan Details
+1. After completing a scan, the results are displayed in the table view
+2. Click on a port entry to view detailed information
+3. Switch between "Table View" and "Log View" for different perspectives
+
+### Exporting Results
+1. After a scan completes, click the "Export Results" button
+2. Choose from available export formats:
+   - CSV: Comma-separated values for spreadsheet applications
+   - Excel: Microsoft Excel format
+   - PDF: Portable Document Format for reporting
+3. The file will be generated and offered for download
+4. A copy of the export is saved to your export history
+
+### Export History
+1. Navigate to the Export History page
+2. View statistics about your exports:
+   - Total number of exports
+   - Most commonly used format
+   - Most frequently scanned host
+3. Browse the list of previous exports
+4. Use filtering options:
+   - Filter by target hostname/IP
+   - Filter by export format
+   - Search by summary content
+5. Download any previous export file by clicking its download button
+6. Click the refresh button to update the export history
+
+## 7. Dashboard Features
+
+The dashboard provides an overview of your scanning activity:
+
+- **Recent Scans**: Quick access to your most recent scan results
+- **Scan Statistics**: Visual representation of your scanning activity
+- **Open Port Distribution**: Analysis of commonly discovered open ports
+- **Quick Actions**: Fast access to common tasks
+- **Security Notifications**: Important security alerts and recommendations
+
+## 8. Account Management
+
+- **Profile Settings**: Update your username, email, or password
+- **Notification Preferences**: Configure email notifications
+- **Data Management**: Review and delete your scan history
+- **Account Deletion**: Option to completely remove your account and data
+
+## 9. Security Best Practices
+
+When using PortSentinel, please follow these security recommendations:
+
+- Only scan networks and systems you own or have explicit permission to scan
+- Be aware that port scanning may trigger security alerts on monitored networks
+- Use the application responsibly and in accordance with local laws and regulations
+- Keep your account credentials secure
+- Log out when you're done using the application on shared devices
+- Regularly review the export history to ensure no unauthorized scans
+
+## 10. Troubleshooting
+
+**Issue**: Scan starts but doesn't complete
+**Solution**: 
+- Check your network connection
+- Verify target host is reachable (ping test)
+- Try reducing the thread count
+- Increase the timeout value
+
+**Issue**: Cannot connect to the web interface
+**Solution**:
+- Ensure the application is running
+- Check if another application is using the same port
+- Verify firewall settings are not blocking the connection
+
+**Issue**: Export fails to download
+**Solution**:
+- Check browser download settings
+- Ensure you have sufficient disk space
+- Try a different export format
+
+## 11. FAQ
+
+**Q: Is it legal to scan any IP address?**
+A: No. You should only scan networks and systems you own or have explicit permission to scan.
+
+**Q: How accurate is the service detection?**
+A: PortSentinel uses advanced banner grabbing and protocol detection, but accuracy depends on how the service responds.
+
+**Q: Can I schedule regular scans?**
+A: This feature is planned for future updates but is not currently available.
+
+**Q: Is my scan data secure?**
+A: Yes, all scan data is associated with your user account and protected by authentication.
+
+**Q: How many simultaneous scans can I run?**
+A: The current version supports one active scan per user session.
+
+**Q: Can I scan internal network IPs?**
+A: Yes, you can scan any IP address that your device can reach, including internal network addresses. 
