@@ -1,0 +1,2 @@
+-- Initial schema setup for PortSentinel database
+-- Run this file first to create the basic structure for the database 

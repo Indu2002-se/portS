@@ -1,0 +1,2 @@
+-- Users table definition for PortSentinel
+-- Contains user accounts and authentication information 

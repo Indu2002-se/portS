@@ -1423,7 +1423,7 @@
                     </div>
                     <div class="scan-details">
                         <span class="status-badge ${statusClass}">${statusText}</span>
-                        ${scan.open_ports_count || 0} open ports ${scan.services && scan.services.length > 0 ? '• ' + scan.services.join(', ') : ''}
+                        ${scan.services && scan.services.length > 0 ? scan.services.join(', ') : ''}
                     </div>
                 `;
                 
